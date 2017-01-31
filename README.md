@@ -225,3 +225,5 @@ Some acpi keys may not work - issue is yet to be handled
 ASUS_WMI configuration parameter is missing
 
 Suggestions for changes and improvements are welcome.
+#DISCLAIMER
+I take no responsibility for any damages or inconvenience caused. Use at your own risk
