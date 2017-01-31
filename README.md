@@ -20,6 +20,7 @@ ASUS X555L Hardware Specifications
 
 #Technical Details
 "lspci -vk" output
+
 00:00.0 Host bridge: Intel Corporation Broadwell-U Host Bridge -OPI (rev 09)
 	Subsystem: ASUSTeK Computer Inc. Broadwell-U Host Bridge -OPI
 	Flags: bus master, fast devsel, latency 0
