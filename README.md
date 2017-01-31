@@ -7,10 +7,15 @@ This kernel configuration supports for systemd and amd64 (x86_64) architecture w
 ASUS X555L Hardware Specifications
 
 Intel core i5 - 5200U processor
+
 4GB RAM
+
 1GB built-in VGA
+
 DVD Sup MTL
+
 1TB HDD
+
 HDMI & VGA secondary output
 
 #Technical Details
@@ -187,6 +192,7 @@ ASUS X555L Hardware Specifications
 	Kernel modules: mt7630e
 
 "lsusb" output
+
 Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
 Bus 001 Device 003: ID 0bda:0129 Realtek Semiconductor Corp. RTS5129 Card Reader Controller
 Bus 001 Device 002: ID 04f2:b483 Chicony Electronics Co., Ltd 
@@ -194,16 +200,27 @@ Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 
 #Necessary /etc/portage/make.conf flags
 CFLAGS="-march=native -O2 -pipe"
+
 Add "gnome X" in USE flag if you are building for gnome
 USE="systemd acl alsa "
+
 CPU_FLAGS_X86="aes avx avx2 fma3 mmx mmxext popcnt sse sse2 sse3 sse4_1 sse4_2 ssse3"
+
 MAKEOPTS="-j5"
+
 VIDEO_CARDS="intel"
+
 INPUT_DEVICES="evdev keyboard mouse synaptics"
+
 GRUB_PLATFORMS="efi-64"
+
 #Notes
 VIDEO_CARDS=”intel” will add support for i915 and i965. However you can change it to “intel i965” or “intel i915”. The latter is not recommended.
+
 Wireless device driver is not included in this configuration file.
+
 Some acpi keys may not work - issue is yet to be handled
+
 ASUS_WMI configuration parameter is missing
+
 Suggestions for changes and improvements are welcome.
