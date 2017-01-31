@@ -1,0 +1,1 @@
+# ASUS-X555L-Gentoo-kernel-config
