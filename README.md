@@ -1,6 +1,7 @@
 # ASUS-X555L-Gentoo-kernel-config
 
-eselect profile: default/linux/amd64/13.0/systemd
+#eselect profile: default/linux/amd64/13.0/systemd
+
 This kernel configuration supports for systemd and amd64 (x86_64) architecture with UEFI
 
 ASUS X555L Hardware Specifications
@@ -12,8 +13,7 @@ ASUS X555L Hardware Specifications
 1TB HDD
 HDMI & VGA secondary output
 
-Technical Details
-
+#Technical Details
 "lspci -vk" output
 00:00.0 Host bridge: Intel Corporation Broadwell-U Host Bridge -OPI (rev 09)
 	Subsystem: ASUSTeK Computer Inc. Broadwell-U Host Bridge -OPI
@@ -192,17 +192,16 @@ Bus 001 Device 003: ID 0bda:0129 Realtek Semiconductor Corp. RTS5129 Card Reader
 Bus 001 Device 002: ID 04f2:b483 Chicony Electronics Co., Ltd 
 Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 
-Necessary /etc/portage/make.conf flags
+#Necessary /etc/portage/make.conf flags
 CFLAGS="-march=native -O2 -pipe"
-#Add "gnome X" in USE flag if you are building for gnome
+Add "gnome X" in USE flag if you are building for gnome
 USE="systemd acl alsa "
 CPU_FLAGS_X86="aes avx avx2 fma3 mmx mmxext popcnt sse sse2 sse3 sse4_1 sse4_2 ssse3"
 MAKEOPTS="-j5"
 VIDEO_CARDS="intel"
 INPUT_DEVICES="evdev keyboard mouse synaptics"
 GRUB_PLATFORMS="efi-64"
-
-Notes
+#Notes
 VIDEO_CARDS=”intel” will add support for i915 and i965. However you can change it to “intel i965” or “intel i915”. The latter is not recommended.
 Wireless device driver is not included in this configuration file.
 Some acpi keys may not work - issue is yet to be handled
